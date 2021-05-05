@@ -1,0 +1,1 @@
+#define ENABLE_GUILD_STATISTICS_SYSTEM			//Lonca istatistik sistemi.//Coding KioShima
