@@ -30,7 +30,7 @@ ACMD(do_lonca_istatistik)
 	}
 
 	BYTE onoff = 1;
-	TGuildMember* lider = g->GetMember(ch->GetPlayerID());
+	auto lider = g->GetMember(ch->GetPlayerID());
 	if (lider && lider->grade == GUILD_LEADER_GRADE)
 		onoff = 0;
 
