@@ -80,15 +80,15 @@ void CWarMap::LoadGuildWarStatistics(LPCHARACTER ch, BYTE bOnOff)
 //Add belove:
 
 #ifdef ENABLE_GUILD_STATISTICS_SYSTEM
-		const auto& pGuildPlayerStatistics = GetStatistics(ch->GetPlayerID());
-		if (!pGuildPlayerStatistics)
-			NewPlayerStatistics(ch->GetPlayerID(), ch->GetName(), dwDeadGuild, false);
-		else
-			pGuildPlayerStatistics->bDead += 1;
+	const auto& pGuildPlayerStatistics = GetStatistics(ch->GetPlayerID());
+	if (!pGuildPlayerStatistics)
+		NewPlayerStatistics(ch->GetPlayerID(), ch->GetName(), dwDeadGuild, false);
+	else
+		pGuildPlayerStatistics->bDead += 1;
 
-		const auto& pGuildKillerStatistics = GetStatistics(killer->GetPlayerID());
-		if (!pGuildKillerStatistics)
-			NewPlayerStatistics(killer->GetPlayerID(), killer->GetName(), dwKillerGuild);
-		else
-			pGuildKillerStatistics->bKill += 1;
+	const auto& pGuildKillerStatistics = GetStatistics(killer->GetPlayerID());
+	if (!pGuildKillerStatistics)
+		NewPlayerStatistics(killer->GetPlayerID(), killer->GetName(), dwKillerGuild);
+	else
+		pGuildKillerStatistics->bKill += 1;
 #endif

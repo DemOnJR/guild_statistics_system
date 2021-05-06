@@ -2,7 +2,7 @@
 
 	void			SetLastAttacked(DWORD time);
 
-//Add above:
+//Add belove:
 
 #ifdef ENABLE_GUILD_STATISTICS_SYSTEM
 	void			SetLastLoncaIstatistikLastTime(int time) { m_dwLonIstLastTime = time; }
@@ -13,7 +13,7 @@
 
 	bool			m_bStaminaConsume;
 
-//Add above:
+//Add belove:
 
 #ifdef ENABLE_GUILD_STATISTICS_SYSTEM
 	int				m_dwLonIstLastTime;
